@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Login</h1>
+<table>
+    <tr>
+        <td>Username</td>
+        <td><input type="text" id="username"/></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="text" id="password"/></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="login()">Log In</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+<script>
+    function login(){
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        window.location.href = `login?username=${username}&password=${password}`
+    }
+</script>
